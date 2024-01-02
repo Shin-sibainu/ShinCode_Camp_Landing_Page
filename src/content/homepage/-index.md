@@ -1,51 +1,50 @@
 ---
-# Banner
+#banner
 banner:
-  title: "The Ultimate Starter Template You Need To Start Your Astro Project"
-  content: "Astroplate is a free starter template built with Astro and TailwindCSS, providing everything you need to jumpstart your Astro project and save valuable time."
+  title: "Shincode_Campへようこそ"
+  content: "Shincode_Campは、あなたのプログラミング学習を加速させます。未知の技術分野でも分かりやすい教材でキャッチアップが可能です。"
   image: "/images/banner.png"
   button:
     enable: true
-    label: "Get Started For Free"
+    label: "無料で始める"
     link: "https://github.com/zeon-studio/astroplate"
 
 # Features
 features:
-  - title: "What's Included in Astroplate"
+  - title: "ShinCode_Campのプログラム内容"
     image: "/images/service-1.png"
-    content: "Astroplate is a comprehensive starter template that includes everything you need to get started with your Astro project. What's Included in Astroplate"
+    content: "ShinCode_Campは、あなたのプログラミング学習を加速させます。"
     bulletpoints:
-      - "10+ Pre-build pages"
-      - "95+ Google Pagespeed Score"
-      - "Build with Astro and TailwindCSS for easy and customizable styling"
-      - "Fully responsive on all devices"
-      - "SEO-optimized for better search engine rankings"
-      - "**Open-source and free** for personal and commercial use"
+      - "**20以上のWebプログラミング特化の教材**"
+      - "**実践的ハンズオン形式でWebサイト/アプリ作成**"
+      - "**Discordサーバーで技術共有＆質問し放題**"
+      - "**どの教材よりも分かりやすい動画コンテンツ**"
+      - "**Webコンテンツは随時追加(追加料金一切不要)**"
     button:
       enable: false
-      label: "Get Started Now"
+      label: "今すぐ始める"
       link: "#"
 
-  - title: "Discover the Key Features Of Astro"
+  - title: "Web入門から発展的な内容まで"
     image: "/images/service-2.png"
-    content: "Astro is an all-in-one web framework for building fast, content-focused websites. It offers a range of exciting features for developers and website creators. Some of the key features are:"
+    content: "駆け出しWebエンジニア向けの入門教材はもちろん、実務経験者の方も本講座で学習を続けて継続的なスキルアップをしています。Discordサーバーでは技術共有も行っております。"
     bulletpoints:
-      - "Zero JS, by default: No JavaScript runtime overhead to slow you down."
-      - "Customizable: Tailwind, MDX, and 100+ other integrations to choose from."
-      - "UI-agnostic: Supports React, Preact, Svelte, Vue, Solid, Lit and more."
+      - "**教材作成者は登録者3万人越えのプログラミング系Youtuber**"
+      - "**初学者目線で難しい専門用語を噛み砕いて解説**"
+      - "**ShinCodeが質問に対して丁寧に回答**"
     button:
       enable: true
-      label: "Get Started Now"
+      label: "無料ではじめる"
       link: "https://github.com/zeon-studio/astroplate"
 
-  - title: "The Top Reasons to Choose Astro for Your Next Project"
+  - title: "プログラミング動画コンテンツ内容"
     image: "/images/service-3.png"
-    content: "With Astro, you can build modern and content-focused websites without sacrificing performance or ease of use."
+    content: "主にモダンなフロントエンド技術をレクチャーしています。"
     bulletpoints:
-      - "Instantly load static sites for better user experience and SEO."
-      - "Intuitive syntax and support for popular frameworks make learning and using Astro a breeze."
-      - "Use any front-end library or framework, or build custom components, for any project size."
-      - "Built on cutting-edge technology to keep your projects up-to-date with the latest web standards."
+      - "**React/Next.js/Astro/Typescript/StoryBook/Three.js...**"
+      - "**Node.js(Express)/Python/PHP/Firebase/Supabase...**"
+      - "**Vercel/AWS/Cloudflare Pages/Prisma/GraphQL...**"
+
     button:
       enable: false
       label: ""

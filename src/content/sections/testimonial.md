@@ -1,27 +1,27 @@
 ---
 enable: true
-title: "What Users Are Saying About Astroplate"
-description: "Don't just take our word for it - hear from some of our satisfied users!  Check out some of our testimonials below to see what others are saying about Astroplate."
+title: "ShinCode_Campのユーザーが語る"
+description: "私たちの言葉だけで信じないでください - 満足したユーザーからの声を聞いてみてください！ 以下にAstroplateについて語っている他の人々の声をいくつか紹介します。"
 
-# Testimonials
+# テストモニアル
 testimonials:
-  - name: "Marvin McKinney"
-    designation: "Web Designer"
+  - name: "マービン・マッキニー"
+    designation: "Camp受講者"
     avatar: "/images/avatar-sm.png"
-    content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui iusto illo molestias, assumenda expedita commodi inventore non itaque molestiae voluptatum dolore, facilis sapiente, repellat veniam."
+    content: "ハンズオン形式でとても分かりやすかった。"
 
-  - name: "Marvin McKinney"
-    designation: "Web Designer"
+  - name: "マービン・マッキニー"
+    designation: "Camp受講者"
     avatar: "/images/avatar-sm.png"
-    content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui iusto illo molestias, assumenda expedita commodi inventore non itaque molestiae voluptatum dolore, facilis sapiente, repellat veniam."
+    content: "ハンズオン形式でとても分かりやすかった。"
 
-  - name: "Marvin McKinney"
-    designation: "Web Designer"
+  - name: "マービン・マッキニー"
+    designation: "Camp受講者"
     avatar: "/images/avatar-sm.png"
-    content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui iusto illo molestias, assumenda expedita commodi inventore non itaque molestiae voluptatum dolore, facilis sapiente, repellat veniam."
+    content: "ハンズオン形式でとても分かりやすかった。"
 
-  - name: "Marvin McKinney"
-    designation: "Web Designer"
+  - name: "マービン・マッキニー"
+    designation: "Camp受講者"
     avatar: "/images/avatar-sm.png"
-    content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui iusto illo molestias, assumenda expedita commodi inventore non itaque molestiae voluptatum dolore, facilis sapiente, repellat veniam."
+    content: "ハンズオン形式でとても分かりやすかった。"
 ---
