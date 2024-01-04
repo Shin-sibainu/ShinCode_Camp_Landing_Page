@@ -1,10 +1,10 @@
 ---
 enable: true
-title: "Ready to build your next project with Astro?"
+title: "ハイレベルなWebエンジニアになる準備はいいですか？"
 image: "/images/call-to-action.png"
-description: "Experience the future of web development with Astroplate and Astro. Build lightning-fast static sites with ease and flexibility."
+description: "初めの1週間は無料で受講体験できます。それ以降の月額費用は**2500円**となります。いつでも解約可能。"
 button:
   enable: true
-  label: "Get Started Now"
+  label: "無料で始める"
   link: "https://github.com/zeon-studio/astroplate"
 ---

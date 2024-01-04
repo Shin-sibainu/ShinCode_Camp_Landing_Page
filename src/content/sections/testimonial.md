@@ -1,7 +1,7 @@
 ---
 enable: true
-title: "ShinCode_Campのユーザーが語る"
-description: "私たちの言葉だけで信じないでください - 満足したユーザーからの声を聞いてみてください！ 以下にAstroplateについて語っている他の人々の声をいくつか紹介します。"
+title: "ShinCode_Campの受講者の声"
+description: "以下は実際にCampを受講した方の声です。大変ご満足いただいております。"
 
 # テストモニアル
 testimonials:
