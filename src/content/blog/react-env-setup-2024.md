@@ -1,22 +1,66 @@
 ---
-title: "ブログ記事執筆で利用するマークダウン一覧"
-meta_title: ""
-description: "マークダウン形式で執筆するブログではマークダウン記法を知る必要があるので、それを一覧にしてまとめました。QiitaやZennや個人ブログでマークダウンを利用する方は参考にしてください。"
-date: 2024-01-09
+title: "【2024年】React開発環境構築をViteを使って構築してみた"
+meta_title: "Reactの開発環境構築を2024年バージョンで行います。"
+description: "Reactの開発環境構築を2024年バージョンで行います。"
+date: 2024-01-10
 image: "/images/banner.png"
-categories: ["Blog"]
+categories: ["React"]
 author: "ShinCode"
-tags: ["markdown"]
+tags:
+  [
+    "vitest",
+    "tailwindcss",
+    "storybook",
+    "shadcn/ui",
+    "husky",
+    "eslint",
+    "prettier",
+  ]
 draft: false
 ---
 
-# Heading 1
+## Reactに何を導入するのか
 
-## Heading 2
+2024年現在で個人的に導入した方が良いなと思うライブラリは以下です。
 
-### Heading 3
+- **Vite (フロントエンドツール)**
+- **Vitest (テスト用)**
+- **TailwindCSS (CSSフレームワーク)**
+- **StoryBook (UIカタログ)**
+- **Shadcn/ui (UIコンポーネントライブラリ)**
+- **Eslint (構文チェック)**
+- **Prettier (コードフォーマッタ)**
+- **husky(コミット前自動コマンド発火)**
 
-#### Heading 4
+初期セットアップとしてこれらを導入すればプロジェクト開発は割とスムーズにいくかなと思います。
+
+完成系のGithubソースコードはこちらです。
+[完成版ソースコード](https://github.com/Shin-sibainu/react-setup-for-yt-2024)
+
+それでは順番にはじめます。
+
+### Viteを使って環境構築開始
+
+まず始めにviteが高速なのでviteを利用します。ターミナルで以下を実行します。
+
+```cmd
+npm create vite@latest react-env-setup -- --template react-swc-ts
+```
+
+swcはRustベースのWebコンパイラです。高速に動くので採用します。
+作成したプロジェクトに移動します。
+
+```cmd
+cd react-env-setup
+npm install
+npm run dev
+npm run build
+npm run preview
+```
+
+これらを実行して動くか確認してください。previewはbuildした際のdistフォルダのindex.htmlを読み込みます。本番環境で動く動作の確認ができます。
+
+### Heading 4
 
 ##### Heading 5
 
