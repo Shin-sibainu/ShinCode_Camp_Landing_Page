@@ -1,13 +1,13 @@
 {
   "site": {
-    "title": "ShinCode",
+    "title": "ShinCode_Camp",
     "base_url": "https://astroplate.netlify.app",
     "base_path": "/",
     "trailing_slash": false,
     "favicon": "/images/favicon.png",
     "logo_width": "150",
     "logo_height": "30",
-    "logo_text": "ShinCode"
+    "logo_text": "ShinCode_Camp"
   },
 
   "settings": {
@@ -15,7 +15,7 @@
     "sticky_header": true,
     "theme_switcher": true,
     "default_theme": "system",
-    "pagination": 2,
+    "pagination": 4,
     "summary_length": 200,
     "blog_folder": "blog"
   },
@@ -28,7 +28,7 @@
   "navigation_button": {
     "enable": true,
     "label": "無料で始める",
-    "link": "https://github.com/zeon-studio/astroplate"
+    "link": "https://code-s-school-5bc2.thinkific.com/bundles/shincode-camp"
   },
 
   "disqus": {
