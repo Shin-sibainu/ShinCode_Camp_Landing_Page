@@ -6,5 +6,5 @@ description: "実務で使えるWeb知識を身に着けられる数少ないオ
 button:
   enable: true
   label: "無料で体験する"
-  link: "https://twitter.com/Shin_Engineer"
+  link: "https://code-s-school-5bc2.thinkific.com/bundles/shincode-camp"
 ---

@@ -16,7 +16,7 @@ banner:
   button:
     enable: true
     label: "無料で始める"
-    link: "https://github.com/zeon-studio/astroplate"
+    link: "https://code-s-school-5bc2.thinkific.com/bundles/shincode-camp"
 
 # Features
 features:
@@ -32,7 +32,7 @@ features:
     button:
       enable: false
       label: "今すぐ始める"
-      link: "#"
+      link: "https://code-s-school-5bc2.thinkific.com/bundles/shincode-camp"
 
   # features:
   #   - title: "プログラミング解説系Youtuber"
@@ -59,7 +59,7 @@ features:
     button:
       enable: true
       label: "無料ではじめる"
-      link: "https://github.com/zeon-studio/astroplate"
+      link: "https://code-s-school-5bc2.thinkific.com/bundles/shincode-camp"
 
   # - title: "WebプログラミングUdemy講師"
   #   image: "/images/service-2.png"
