@@ -4,6 +4,10 @@
 
 @layer base {
   @import "base";
+
+  img {
+    margin: auto;
+  }
 }
 
 @layer components {

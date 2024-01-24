@@ -3,7 +3,7 @@ title: "ShinCode_Campってなに？どれくらいの人が学んでいるの�
 meta_title: ""
 description: "ShinCode_Campとは何か？何を学ぶことができるのかを知ることができます。"
 date: 2024-01-12
-image: "/images/banner.png"
+image: "/images/blogs/shincode_camp.png"
 categories: ["Blog"]
 author: "ShinCode"
 tags: ["shincode_camp"]
