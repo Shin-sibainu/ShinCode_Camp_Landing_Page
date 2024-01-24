@@ -3,7 +3,7 @@ title: "【2024年】React開発環境構築をViteを使って構築してみ�
 meta_title: "Reactの開発環境構築を2024年バージョンで行います。"
 description: "Reactの開発環境構築を2024年バージョンで行います。"
 date: 2024-01-10
-image: "/images/banner.png"
+image: "/images/blogs/thumbnails/react-setup-2024.png"
 categories: ["React"]
 author: "ShinCode"
 tags:
