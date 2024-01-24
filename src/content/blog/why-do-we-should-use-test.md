@@ -1,10 +1,10 @@
 ---
 title: "なぜ私たちはフロントエンドテストをするべきなのか"
-meta_title: ""
+meta_title: "なぜ私たちはフロントエンドテストをするべきなのか"
 description: "なぜ私たちはフロントエンドテストをするべきなのか"
 date: 2024-01-12
-image: "/images/blogs/thumbnails/why-we-frontend-test.png"
-categories: ["Blog", "Test"]
+image: "/images/blogs/thumbnails/why-do-we-should-use-test.png"
+categories: ["Test"]
 author: "ShinCode"
 tags: ["test"]
 draft: false
