@@ -1,5 +1,5 @@
 ---
-title: "【2024年】React開発環境構築をViteを使って構築してみた"
+title: "【2024年】React開発環境構築をViteを使って構築しよう"
 meta_title: "Reactの開発環境構築を2024年バージョンで行います。"
 description: "Reactの開発環境構築を2024年バージョンで行います。"
 date: 2024-01-10
@@ -39,7 +39,7 @@ draft: false
 
 それでは順番にはじめます。
 
-### Viteを使って環境構築開始
+#### Viteを使って環境構築開始
 
 まず始めにviteが高速なのでviteを利用します。ターミナルで以下を実行します。
 
@@ -59,5 +59,60 @@ npm run preview
 ```
 
 これらを実行して動くか確認してください。previewはbuildした際のdistフォルダのindex.htmlを読み込みます。本番環境で動く動作の確認ができます。
+
+#### importパスエイリアス設定
+
+ファイルをimportする際に
+
+```js
+import Sample from "../../../components/Sample.tsx";
+```
+
+のような相対パスだと取り扱いにくいので
+
+```js
+import Sample from @/components/Sample.tsx
+```
+
+のような形に変更するパスエイリアス設定をします。
+
+(./tsconfig.json)
+
+```json
+"compilerOptions": {
+    "baseUrl": "./",
+    "paths": {
+      "@/*": ["src/*"]
+    }
+  },
+```
+
+これでパスエイリアス設定は終了です。ただ、viteで環境構築している場合はvite.config.tsも設定を変更する必要があるので、それは面倒です。なので**vite-tsconfig-paths**モジュールをインストールします。
+
+```cmd
+npm i -D vite-tsconfig-paths
+```
+
+(./vite.config.ts)
+
+```ts
+import react from "@vitejs/plugin-react-swc";
+import { defineConfig } from "vite";
+import tsconfigPaths from "vite-tsconfig-paths";
+
+export default defineConfig({
+  plugins: [react(), tsconfigPaths()], //for path alias
+});
+```
+
+これでvite.config.tsの修正は不要になりました。
+
+#### vitestでテストの導入
+
+今回はvitestとtesting-libraryを使ってテストができる環境を作ります。以下をインストールしましょう。
+
+```cmd
+npm install -D vitest happy-dom @vitest/coverage-v8 @testing-library/react @testing-library/user-event @testing-library/jest-dom
+```
 
 執筆中・・・
