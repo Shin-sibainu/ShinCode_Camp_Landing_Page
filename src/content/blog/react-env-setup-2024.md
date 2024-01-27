@@ -226,4 +226,107 @@ test("TextInput Component Test", async () => {
 
 #### EslintとPrettierで構文チェックとコード整形
 
+Eslintはプロジェクト内での構文ルールを決めるために使われるライブラリで、Prettierはコードフォーマッタ(コード整形)に関与するライブラリです。これらのセットアップを行います。
+
+まずはEslintのインストールから。
+
+```cmd 
+npm install -D eslint
+npx eslint --init
+```
+
+として初期化コマンドを実行してください。eslintrc.cjsファイルが自動生成されます。package.jsonにlintするためのスクリプトを記述しておきましょう。
+
+```json
+"scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "test": "vitest",
+    "test:watch": "vitest watch",
+    "coverage": "vitest run --coverage",
+    "lint": "eslint src", //追加
+}
+```
+
+eslintrc.cjsを以下のように修正してください。
+
+```js
+module.exports = {
+  env: {
+    browser: true,
+    es2021: true,
+  },
+  extends: [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:react/recommended",
+  ],
+  overrides: [
+    {
+      env: {
+        node: true,
+      },
+      files: [".eslintrc.{js,cjs}"],
+      parserOptions: {
+        sourceType: "script",
+      },
+    },
+  ],
+  parser: "@typescript-eslint/parser",
+  parserOptions: {
+    ecmaVersion: "latest",
+    sourceType: "module",
+  },
+  plugins: ["@typescript-eslint", "react"],
+  rules: {
+    "react/react-in-jsx-scope": "off",
+  },
+};
+```
+構文チェックが自動で入ります。ここで恐らく./src/App.tsxファイルに構文エラーが出てくるはずです。具体的には
+
+```tsx
+ <a href="https://vitejs.dev" target="_blank" rel="noopener noreferrer">
+```
+の部分ですね。rel="noopener noreferrer"に修正してください。タブを開いた時に参照元の追跡ができないような修正です。セキュリティ対策になります。もしくは
+
+```cmd
+npm run lint
+```
+と実行すると自動で修正されますので、どちらでも構いません。
+
+#### Prettierの設定
+Prettierをインストールします。既にPrettierの拡張機能をエディタにインストールしている場合はこの手順はスキップしても構いません。
+
+```cmd
+npm i -D prettier
+```
+prettier.config.jsを作成してください。プロジェクトのルートディレクトリで構いません。
+
+```js
+/** @type {import("prettier").Config} */
+const config = {};
+
+export default config;
+```
+設定は何もしていません。デフォルトのままで行います。これでも整形されるのでOKです。エディタのセーブ時にコード整形を行いたい場合はVSCodeのsettings.jsonファイルにformat on saveを追加してください。
+
+これで簡単ではありますがprettierの設定も終了です。
+
+#### hasky + lint-stagedの導入
+
+haskyとlint-stagedを組み合わせる事で、gitにコミットする前(Gitフックで任意に設定可能)にlintやformat等のコマンドを走らせることができます。リポジトリを汚さないという意味でコミット前に整形済みのコードを入れるために使われます。
+
+```cmd
+git init
+npm install --save-dev husky lint-staged
+npx husky install
+npm pkg set scripts.prepare="husky install" //package.jsonのscriptにprepareが追加される
+npm run prepare //.huskyディレクトリが生成される
+npx husky add .husky/pre-commit "npx lint-staged"
+```
+
+次に、package.jsonファイルを修正します。
+
 執筆中・・・
