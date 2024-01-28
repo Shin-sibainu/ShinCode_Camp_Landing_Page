@@ -159,6 +159,20 @@ export default defineConfig({
 import "@testing-library/jest-dom/vitest";
 ```
 
+つづいて、tsconfig.jsonの中身に以下を追加してください。
+
+```json
+//省略
+ /* path alias */
+    "baseUrl": "./",
+    "paths": {
+      "@/*": ["src/*"]
+    },
+
+    "types": ["vitest/globals"] //これを追加
+//省略
+```
+
 としてください。これでvitestで利用される**test**や**expect**関数がimportなしで利用できるようになります。
 
 もしもtestやexpect関数が利用できない場合は以下をtsconfig.jsonファイルに追加してください。
@@ -230,7 +244,7 @@ Eslintはプロジェクト内での構文ルールを決めるために使わ�
 
 まずはEslintのインストールから。
 
-```cmd 
+```cmd
 npm install -D eslint
 npx eslint --init
 ```
@@ -284,24 +298,29 @@ module.exports = {
   },
 };
 ```
+
 構文チェックが自動で入ります。ここで恐らく./src/App.tsxファイルに構文エラーが出てくるはずです。具体的には
 
 ```tsx
  <a href="https://vitejs.dev" target="_blank" rel="noopener noreferrer">
 ```
+
 の部分ですね。rel="noopener noreferrer"に修正してください。タブを開いた時に参照元の追跡ができないような修正です。セキュリティ対策になります。もしくは
 
 ```cmd
 npm run lint
 ```
+
 と実行すると自動で修正されますので、どちらでも構いません。
 
 #### Prettierの設定
+
 Prettierをインストールします。既にPrettierの拡張機能をエディタにインストールしている場合はこの手順はスキップしても構いません。
 
 ```cmd
 npm i -D prettier
 ```
+
 prettier.config.jsを作成してください。プロジェクトのルートディレクトリで構いません。
 
 ```js
@@ -310,6 +329,7 @@ const config = {};
 
 export default config;
 ```
+
 設定は何もしていません。デフォルトのままで行います。これでも整形されるのでOKです。エディタのセーブ時にコード整形を行いたい場合はVSCodeのsettings.jsonファイルにformat on saveを追加してください。
 
 これで簡単ではありますがprettierの設定も終了です。
