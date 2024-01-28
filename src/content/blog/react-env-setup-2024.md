@@ -145,6 +145,7 @@ import tsconfigPaths from "vite-tsconfig-paths";
 export default defineConfig({
   plugins: [react(), tsconfigPaths()],
   test: {
+    globals: true, //追加
     environment: "happy-dom", //追加
     setupFiles: ["./vitest-setup.ts"], //追加
   },
@@ -305,13 +306,14 @@ module.exports = {
  <a href="https://vitejs.dev" target="_blank" rel="noopener noreferrer">
 ```
 
-の部分ですね。rel="noopener noreferrer"に修正してください。タブを開いた時に参照元の追跡ができないような修正です。セキュリティ対策になります。もしくは
+の部分ですね。rel="noopener noreferrer"に修正してください。タブを開いた時に参照元の追跡ができないような修正です。セキュリティ対策になります。
+構文エラーの場所を探すのが面倒という場合は
 
 ```cmd
 npm run lint
 ```
 
-と実行すると自動で修正されますので、どちらでも構いません。
+と実行するとエラー箇所のファイル名とルール名がターミナル上で出力されるので確認してみてください。
 
 #### Prettierの設定
 
@@ -338,8 +340,9 @@ export default config;
 
 haskyとlint-stagedを組み合わせる事で、gitにコミットする前(Gitフックで任意に設定可能)にlintやformat等のコマンドを走らせることができます。リポジトリを汚さないという意味でコミット前に整形済みのコードを入れるために使われます。
 
+まずは今作っているプロジェクトのgithubのリポジトリを作成してみてください。リポジトリの作成方法に関しては省略します。次に必要なライブラリをインストールします。
+
 ```cmd
-git init
 npm install --save-dev husky lint-staged
 npx husky install
 npm pkg set scripts.prepare="husky install" //package.jsonのscriptにprepareが追加される
@@ -348,5 +351,31 @@ npx husky add .husky/pre-commit "npx lint-staged"
 ```
 
 次に、package.jsonファイルを修正します。
+
+```json
+{
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx,md}": ["prettier --write", "eslint --fix"]
+  },
+  "ignorePatterns": ["!.storybook"]
+}
+```
+
+commitする前に実行されるコマンドとstorybookのディレクトリは無視するという記述です。これでcommitする前にeslintとprettierのコマンドが走ります。もし構文エラーの場合はcommitされません。コミットしてみます。
+
+```cmd
+git init
+git remote add origin https://github.com/GitHubのユーザー名/リポジトリ名.git
+git branch -M main
+git add .
+git commit -m "first commit" //ここで検証される
+git push -u origin main
+```
+
+もしも構文エラーが発生した場合は修正してから再度コミットしてください。これでhuskyとlint-stagedの設定は終了です。
+
+#### StoryBookの導入
+
+StoryBookは作成したUIライブラリをカタログとして保存・共有できるライブラリです。チーム内でUIイメージの齟齬がないように利用されます。最近のプロジェクトでは導入されるケースが多いので、これもセットアップしておきましょう。
 
 執筆中・・・
