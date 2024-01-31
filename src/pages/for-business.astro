@@ -25,39 +25,22 @@ interface ForBusiness {
 
 const for_business = await getEntry("for-business", "-index");
 const testimonial = await getEntry("sections", "testimonial");
-const call_to_action = await getEntry("sections", "call-to-action");
+const call_to_action = await getEntry(
+  "sections",
+  "call-to-action-for-business",
+);
 const { banner, features }: ForBusiness = for_business.data;
 ---
 
 <Base>
   <!-- Banner -->
-  <section class="section pt-14">
+  <section class="pt-14 mb-10">
     <div class="container">
       <div class="row justify-center">
-        <div class="mb-16 text-center lg:col-7">
+        <div class="text-center lg:col-7">
           <h1 set:html={markdownify(banner.title)} class="mb-4" />
           <p set:html={markdownify(banner.content)} class="mb-8" />
-          {
-            banner.button.enable && (
-              <a class="btn btn-primary" href={banner.button.link}>
-                {banner.button.label}
-              </a>
-            )
-          }
         </div>
-        {
-          banner.image && (
-            <div class="col-12">
-              <ImageMod
-                src={banner.image}
-                height={380}
-                width={1200}
-                alt="banner image"
-                format="webp"
-              />
-            </div>
-          )
-        }
       </div>
     </div>
   </section>
@@ -91,19 +74,11 @@ const { banner, features }: ForBusiness = for_business.data;
                   </li>
                 ))}
               </ul>
-              {feature.button.enable && (
-                <a class="btn btn-primary mt-5" href={feature.button.link}>
-                  {feature.button.label}
-                </a>
-              )}
             </div>
           </div>
         </div>
       </section>
     ))
   }
-  <!-- /Features -->
-
-  <Testimonial testimonial={testimonial} />
   <CallToAction call_to_action={call_to_action} />
 </Base>

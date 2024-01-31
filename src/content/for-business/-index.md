@@ -10,52 +10,33 @@
 #     link: "https://github.com/zeon-studio/astroplate"
 
 banner:
-  title: "Shincode_Campへようこそ"
-  content: "Shincode_Campは、あなたのプログラミング学習を加速させます。未知の技術分野でも分かりやすい教材でキャッチアップが可能です。"
-  image: "/images/banner.png"
-  button:
-    enable: true
-    label: "無料で始める"
-    link: "https://code-s-school-5bc2.thinkific.com/bundles/shincode-camp"
+  title: "Web開発もお任せください"
+  content: "ShinCodeはWebサイト/Webアプリ開発も受け付けております。ページを高速に表示することでSEO効果を上げるサイトを構築できます。"
 
 # Features
 features:
-  - title: "ShinCode_Campのプログラム内容"
-    image: "/images/service-1.png"
-    content: "ShinCode_Campは、あなたのプログラミング学習を加速させます。"
+  - title: "企業HP/Webサイト作成"
+    image: "/images/service-2.png"
+    content: "SPA/SSG/SSRで構築。高速で動くWebサイトを提供します。"
     bulletpoints:
-      - "**20以上のWebプログラミング特化の教材**"
-      - "**実践的ハンズオン形式でWebサイト/アプリ作成**"
-      - "**Discordサーバーで技術共有＆質問し放題**"
-      - "**どの教材よりも分かりやすい動画コンテンツ**"
-      - "**Webコンテンツは随時追加(追加料金一切不要)**"
+      - "**React/Next.jsでのWebサイト構築**"
+      - "**CMSでブログ等のコンテンツ追加も可能**"
+      - "**スマホ・タブレットへのレスポンシブ対応**"
+      - "**3Dモデルの導入も可能(Three.jsを利用)**"
+      - "**開発費用は要相談**"
     button:
       enable: false
       label: "今すぐ始める"
       link: "https://code-s-school-5bc2.thinkific.com/bundles/shincode-camp"
 
-  # features:
-  #   - title: "プログラミング解説系Youtuber"
-  #     image: "/images/service-1.png"
-  #     content: "Webの知識を動画形式でユーザーに分かりやすくお届けしています。"
-  #     bulletpoints:
-  #       - "**200本以上のWebプログラミング特化の動画投稿**"
-  #       - "**実践的ハンズオン形式でWebサイト/アプリ作成**"
-  #       - "**Youtube登録者は32000人**"
-  #       - "**どのチャンネルよりも分かりやすい動画コンテンツ**"
-  #       - "**Xは4000フォロワーの方々に情報発信**"
-  #     button:
-  #       enable: false
-  #       label: "今すぐ始める"
-  #       link: "#"
-
-  - title: "Web入門から発展的な内容まで"
-    image: "/images/service-2.png"
-    content: "駆け出しWebエンジニア向けの入門教材はもちろん、実務経験者の方も本講座で学習を続けて継続的なスキルアップをしています。Discordサーバーでは技術共有も行っております。"
+  - title: "Webアプリケーション開発"
+    image: "/images/service-1.png"
+    content: "ReactやNext.jsを利用してPC上で動くWebアプリを開発します。"
     bulletpoints:
-      - "**教材作成者は登録者3万人越えのプログラミング系Youtuber**"
-      - "**初学者目線で難しい専門用語を噛み砕いて解説**"
-      - "**ShinCodeが質問に対して丁寧に回答**"
+      - "**ダッシュボード管理アプリ**"
+      - "**ECサイト開発**"
+      - "**チャットアプリケーション開発**"
+      - "**生成AI系のアプリ開発**"
     button:
       enable: true
       label: "無料ではじめる"
@@ -73,12 +54,12 @@ features:
   #     label: "無料ではじめる"
   #     link: "https://github.com/zeon-studio/astroplate"
 
-  - title: "プログラミング動画コンテンツ内容"
+  - title: "使用できるプログラム技術"
     image: "/images/service-3.png"
-    content: "主にモダンなフロントエンド技術をレクチャーしています。"
+    content: "Shinが使える技術群です。案件の規模によってはCampのメンバーと協力して開発します。"
     bulletpoints:
-      - "**React/Next.js/Astro/Typescript/StoryBook/Three.js...**"
-      - "**Node.js(Express)/Python/PHP/Firebase/Supabase...**"
+      - "**React/Next.js/Astro/Typescript/Three.js...**"
+      - "**Node.js(Express)/Python/PHP/Supabase...**"
       - "**Testing-Library/Jest/Vitest/Github/CI/CD...**"
       - "**Vercel/AWS/Cloudflare Pages/Prisma/REST/GraphQL...**"
 

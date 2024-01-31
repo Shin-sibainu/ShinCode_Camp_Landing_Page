@@ -77,8 +77,8 @@ features:
     image: "/images/service-3.png"
     content: "主にモダンなフロントエンド技術をレクチャーしています。"
     bulletpoints:
-      - "**React/Next.js/Astro/Typescript/StoryBook/Three.js...**"
-      - "**Node.js(Express)/Python/PHP/Firebase/Supabase...**"
+      - "**React/Next.js/Astro/Typescript//Three.js...**"
+      - "**Node.js(Express)/Python/PHP/Supabase...**"
       - "**Testing-Library/Jest/Vitest/Github/CI/CD...**"
       - "**Vercel/AWS/Cloudflare Pages/Prisma/REST/GraphQL...**"
 
