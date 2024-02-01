@@ -25,12 +25,12 @@ draft: false
 
 - **Vite (フロントエンドツール)**
 - **Vitest (テスト用)**
-- **TailwindCSS (CSSフレームワーク)**
-- **StoryBook (UIカタログ)**
-- **Shadcn/ui (UIコンポーネントライブラリ)**
 - **Eslint (構文チェック)**
 - **Prettier (コードフォーマッタ)**
-- **husky(コミット前自動コマンド発火)**
+- **husky, lint-staged(コミット前自動コマンド発火)**
+- **StoryBook (UIカタログ)**
+- **TailwindCSS (CSSフレームワーク, option)**
+- **Shadcn/ui (UIコンポーネントライブラリ, option)**
 
 初期セットアップとしてこれらを導入すればプロジェクト開発は割とスムーズにいくかなと思います。
 
@@ -376,6 +376,33 @@ git push -u origin main
 
 #### StoryBookの導入
 
-StoryBookは作成したUIライブラリをカタログとして保存・共有できるライブラリです。チーム内でUIイメージの齟齬がないように利用されます。最近のプロジェクトでは導入されるケースが多いので、これもセットアップしておきましょう。
+StoryBookは作成したUIライブラリをカタログとして保存・共有できるライブラリです。チーム内でUIイメージの齟齬がないように利用されます。最近のプロジェクトでは導入されるケースが多いので、これもセットアップしておきましょう。以下のコマンドで初期化します。
 
-執筆中・・・
+```cmd
+npx storybook init --builder @storybook/builder-vite
+```
+
+これで必要なEslintのプラグインやpackage.jsonのscriptsの中身が更新されます。
+自動でstoryディレクトリ内部にサンプルとしてボタンやヘッダーのコンポーネントやストーリが入るので実際にローカルで確認してみます。
+
+また、自動でストーリーのサーバがブラウザで立ち上がると思います。手動で立ち上げたい場合は
+
+```cmd
+npm run storybook
+```
+
+でlocalhost:6006番で確認できます。これでStoryBookのセットアップは完了です。
+
+※TailwindCSSとshadncn/uiライブラリの導入は公式のinstallタブからviteやreactを選択して行ってみてください。手順通りに簡単に初期化セットアップができます。
+
+### 最後に
+
+こちらのセットアップ方法ですが、Youtubeにてアップロードしています。
+
+<Youtube client:load id="2E6iPVsGfPI" title="React-Setup-for-2024" />
+
+分からなかったという方はこちらの動画を見てみてください。またハイレベルなWebエンジニアを目指すためのコミュニティも運営しております。
+
+[ShinCode_Camp](https://code-s-school-5bc2.thinkific.com/bundles/shincode-camp)
+
+1週間お試し無料期間をやっておりますので気になる方はぜひチェックしてみてください。それでは今回は以上になります。
