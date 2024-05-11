@@ -3,7 +3,7 @@ title: "Redshift入門"
 meta_title: "Redshiftの概要について知ることができます"
 description: "Redshiftの概要について知ることができます"
 date: 2024-05-10
-image: "/images/banner.png"
+image: "/images/blogs/thumbnails/redshift2.png"
 categories: ["Redshift"]
 author: "kepo"
 tags: ["AWS", "Redshift"]
