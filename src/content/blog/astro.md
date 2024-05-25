@@ -3,7 +3,7 @@ title: "Astro入門してみた🐣"
 meta_title: "Astro入門してみた🐣"
 description: "Astro入門してみた🐣"
 date: 2024-05-24
-image: "/images/banner.png"
+image: "/images/blogs/thumbnails/astro-tutorial.png"
 categories: ["Astro"]
 author: "kepo"
 tags: ["Astro"]
